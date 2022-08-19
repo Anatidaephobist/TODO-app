@@ -1,5 +1,4 @@
-React TODO app with testing functionality
-
+React TODO app 
 
 # TODO app installation instructions
 
@@ -16,9 +15,4 @@ npm install
 ## Start the local server
 ```
 npm start
-```
-
-# Testing
-```
-npm test
 ```
