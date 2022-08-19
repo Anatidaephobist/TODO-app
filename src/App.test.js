@@ -1,8 +1,22 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+
+test('add todo',() => {
+  const { container, getByText, getByPlaceholderText } = render(<App />);
+
+  const desc = getByPlaceholderText('Description');
+  fireEvent.change(desc, { target: { value: 'Go to coffee' } })
+  const date = getByPlaceholderText('Date');
+  fireEvent.change(date, { target: { value: '29.11.2020' } })
+
+  const button = getByText('Add');
+  fireEvent.click(button);
+
+  expect(screen.getByText('Go to coffee')).toBeInTheDocument();
+
+  const clearButton = getByText('Clear');
+  fireEvent.click(clearButton);
+
+  expect(container).not.toHaveTextContent();
+})
