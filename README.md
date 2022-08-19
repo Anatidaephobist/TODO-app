@@ -1,7 +1,7 @@
-## Clone the repo and install the dependencies
+## Clone the repository and install the dependencies
 
 ```
-git@github.com:Anatidaephobist/TODO-app.git
+git clone git@github.com:Anatidaephobist/TODO-app.git
 
 cd todo-app
 ```
