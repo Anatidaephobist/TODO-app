@@ -1,3 +1,6 @@
+React TODO app with testing functionality
+
+
 # TODO app installation instructions
 
 ## Clone the repository and install the dependencies
@@ -15,3 +18,7 @@ npm install
 npm start
 ```
 
+# Testing
+```
+npm test
+```
